@@ -1,7 +1,7 @@
 # easy-template-string
 
 [![Build Status](https://travis-ci.org/manolan1/easy-template-string.svg?branch=master)](https://travis-ci.org/manolan1/easy-template-string)
-[![Dependency Status](https://david-dm.org/manolan1/easy-template-string.svg)](https://david-dm.org/manolan1/easy-template-string.svg)
+[![Dependency Status](https://david-dm.org/manolan1/easy-template-string.svg)](https://david-dm.org/manolan1/easy-template-string)
 [![Code Coverage](https://codecov.io/gh/manolan1/easy-template-string/branch/master/graph/badge.svg)](https://codecov.io/gh/manolan1/easy-template-string)
 
 Allow normal JS strings to behave like template strings

@@ -55,9 +55,16 @@ describe('template', () => {
         expect(template.interpolate({ value2: 'def' })).toEqual('xydefz');
     });
 
-    it('should coerced objects to string, even if it isn\'t pretty', () => {
+    it('should coerce objects to string, even if it isn\'t pretty', () => {
         const template = new Template('x${value1}y${value2}z');
         expect(template.interpolate({ value1: {}, value2: 'def' })).toEqual('x[object Object]ydefz');
+    });
+
+    it('can identify a Template', () => {
+        expect(Template.isTemplate('x${value1}y${value2}z')).toBeTrue();
+        expect(Template.isTemplate('\\${value}y')).toBeFalse();
+        expect(Template.isTemplate('just a string $ {a}')).toBeFalse();
+        expect(Template.isTemplate('another string ${a')).toBeFalse();
     });
 
 });

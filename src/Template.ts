@@ -37,4 +37,16 @@ export default class Template {
     }
 
     static pattern = /(?<beforeChar>^|.|\r|\n)(?<fullPattern>\$\{(?<propertyName>.*?)\})/g;
+
+    static isTemplate(possibleTemplate: string): boolean {
+        const matches = possibleTemplate.matchAll(Template.pattern);
+
+        for (const match of matches) {
+            /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
+            if (match!.groups!.beforeChar !== '\\') {
+                return true;
+            }
+        }
+        return false;
+    }
 }

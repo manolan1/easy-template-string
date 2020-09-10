@@ -35,6 +35,13 @@ console.log(template4.interpolate({ notPretty: {}, pretty: 'def' }));  // x[obje
 ```
 But ```undefined``` will be ignored just like a missing property.
 
+Provides a helper method to check for a Template string:
+```js
+console.log(Template.isTemplate('x${value1}y${value2}z'));  // true
+console.log(Template.isTemplate('x\\${escaped}y'));         // false
+console.log(Template.isTemplate('just a string'));          // false
+```
+
 
 # Restrictions
 

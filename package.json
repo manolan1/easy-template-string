@@ -1,6 +1,6 @@
 {
     "name": "easy-template-string",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Allow normal JS strings to behave like template strings",
     "main": "./dist/Template.js",
     "types": "./dist/Template.d.ts",
